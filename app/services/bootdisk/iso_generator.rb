@@ -26,6 +26,7 @@ EOF
       end
 
       FileUtils.cp(File.join(Setting[:bootdisk_syslinux_dir], 'isolinux.bin'), File.join(wd, 'build', 'isolinux.bin'))
+      FileUtils.cp(File.join(Setting[:bootdisk_syslinux_dir], 'ldlinux.c32'), File.join(wd, 'build', 'ldlinux.c32'))
       FileUtils.cp(File.join(Setting[:bootdisk_ipxe_dir], 'ipxe.lkrn'), File.join(wd, 'build', 'ipxe'))
       File.open(File.join(wd, 'build', 'script'),'w') { |file| file.write(script) }
 
